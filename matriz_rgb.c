@@ -2,6 +2,9 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 
+// Biblioteca gerada pelo arquivo .pio durante compilacao.
+//#include "ws2818b.pio.h" descomentar para utilizá-la
+
 // ------------------- Definições dos Pinos GPIO -------------------
 
 // Definição dos pinos GPIO do teclado matricial
