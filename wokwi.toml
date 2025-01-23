@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/matriz.rgb.uf2'
+elf = 'build/matriz.rgb.elf'
