@@ -117,7 +117,9 @@ void funcaao_B();
 
 //DEV 4
 void tecla_tres();
-void funcao_C();
+void funcao_C(){
+    //trabalhando nela
+};
 
 //DEV 5
 void tecla_quatro();
