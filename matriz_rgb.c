@@ -3,7 +3,7 @@
 #include "hardware/gpio.h"
 
 // Biblioteca gerada pelo arquivo .pio durante compilacao.
-//#include "ws2818b.pio.h" descomentar para utilizá-la
+// #include "ws2818b.pio.h" descomentar para utilizá-la
 
 // ------------------- Definições dos Pinos GPIO -------------------
 
@@ -548,32 +548,34 @@ void tecla_dois()
 
 void funcao_B()
 {
-    // Inicializa entradas e saídas.
     stdio_init_all();
-
-    // Inicializa matriz de LEDs NeoPixel.
     npInit(LED_PIN);
     npClear();
 
-    // Declaração das matrizes
-    int full_blue[18][5][5][3] = {
-        {{21, 0, 255}, {21, 0, 255}, {21, 0, 255}, {21, 0, 255}, {21, 0, 255}},
-        {{21, 0, 255}, {21, 0, 255}, {21, 0, 255}, {21, 0, 255}, {21, 0, 255}},
-        {{21, 0, 255}, {21, 0, 255}, {21, 0, 255}, {21, 0, 255}, {21, 0, 255}},
-        {{21, 0, 255}, {21, 0, 255}, {21, 0, 255}, {21, 0, 255}, {21, 0, 255}},
-        {{21, 0, 255}, {21, 0, 255}, {21, 0, 255}, {21, 0, 255}, {21, 0, 255}}};
+    // Matriz de cores RGB configurada como Azul (0, 0, 255)
+    int matriz_Azul[5][5][3] = {
+        {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}},
+        {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}},
+        {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}},
+        {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}},
+        {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}}};
 
-    for (int linha = 0; linha < 5; linha++)
+    while (true)
     {
-        for (int coluna = 0; coluna < 5; coluna++)
+        for (int linha = 0; linha < 5; linha++)
         {
-            int posicao = getIndex(linha, coluna);
-            npSetLED(posicao, full_blue[coluna][linha][0], full_blue[coluna][linha][1], full_blue[coluna][linha][2]);
+            for (int coluna = 0; coluna < 5; coluna++)
+            {
+                int posicao = getIndex(coluna, linha);
+                npSetLED(posicao, matriz_Azul[linha][coluna][0], matriz_Azul[linha][coluna][1], matriz_Azul[linha][coluna][2]);
+            }
         }
+
+        npWrite();
+        sleep_ms(1000);
+        npClear();
+        sleep_ms(500);
     }
-    npWrite();      // Atualiza os LEDs
-    sleep_ms(1000); // Espera 1 segundo
-    npClear();      // Limpa os LEDs
 }
 
 void ajustarBrilho(int matriz[5][5][3], float fator)
