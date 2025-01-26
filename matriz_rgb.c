@@ -262,7 +262,7 @@ int getIndex(int x, int y)
   }
 }
 
-void funcao_sharp()
+void tecla_cinco()
 {
   // Inicializa entradas e saídas.
   stdio_init_all();
@@ -560,3 +560,48 @@ void funcao_B()
     }
 
 
+void ajustarBrilho(int matriz[5][5][3], float fator)
+    {
+        for (int linha = 0; linha < 5; linha++)
+        {
+            for (int coluna = 0; coluna < 5; coluna++)
+            {
+                matriz[linha][coluna][0] = (int)(matriz[linha][coluna][0] * fator); // Reduz R
+                matriz[linha][coluna][1] = (int)(matriz[linha][coluna][1] * fator); // Reduz G
+                matriz[linha][coluna][2] = (int)(matriz[linha][coluna][2] * fator); // Reduz B
+            }
+        }
+    }
+
+void funcao_sharp()
+{
+    stdio_init_all();
+    npInit(LED_PIN);
+    npClear();
+
+    // Matriz de cores RGB configurada como branco (255, 255, 255).
+    int matriz[5][5][3] = {
+        {{255, 255, 255}, {255, 255, 255}, {255, 255, 255}, {255, 255, 255}, {255, 255, 255}},
+        {{255, 255, 255}, {255, 255, 255}, {255, 255, 255}, {255, 255, 255}, {255, 255, 255}},
+        {{255, 255, 255}, {255, 255, 255}, {255, 255, 255}, {255, 255, 255}, {255, 255, 255}},
+        {{255, 255, 255}, {255, 255, 255}, {255, 255, 255}, {255, 255, 255}, {255, 255, 255}},
+        {{255, 255, 255}, {255, 255, 255}, {255, 255, 255}, {255, 255, 255}, {255, 255, 255}}};
+
+    ajustarBrilho(matriz, 0.2); // Reduz o brilho para 20%.
+
+    while (true)
+    {
+        for (int linha = 0; linha < 5; linha++)
+        {
+            for (int coluna = 0; coluna < 5; coluna++)
+            {
+                int posicao = getIndex(coluna, linha);
+                npSetLED(posicao, matriz[linha][coluna][0], matriz[linha][coluna][1], matriz[linha][coluna][2]);
+            }
+        }
+        npWrite();
+        sleep_ms(1000);
+        npClear();
+        sleep_ms(500);
+    }
+}
