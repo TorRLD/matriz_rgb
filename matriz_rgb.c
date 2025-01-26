@@ -3,7 +3,7 @@
 #include "hardware/gpio.h"
 
 // Biblioteca gerada pelo arquivo .pio durante compilacao.
-//#include "ws2818b.pio.h" descomentar para utilizá-la
+#include "ws2818b.pio.h" descomentar para utilizá-la
 
 // ------------------- Definições dos Pinos GPIO -------------------
 
@@ -129,34 +129,34 @@ void funcao_sharp();
 
 
 int main() {
-    stdio_init_all();
-    setup_gpio();
+  stdio_init_all();
+  setup_gpio();
 
-    printf("Sistema iniciado. Pressione uma tecla no teclado matricial.\n");
-    
-    while (true) {
-        char tecla = read_keypad();
-        if (tecla != '\0') {
-            printf("Tecla '%c' pressionada.\n", tecla);
-            // Aqui você pode adicionar a lógica para o que fazer com a tecla pressionada
+  printf("Sistema iniciado. Pressione uma tecla no teclado matricial.\n");
+  
+  while (true) {
+      char tecla = read_keypad();
+      if (tecla != '\0'){ 
+          printf("Tecla '%c' pressionada.\n", tecla);
+          // Aqui você pode adicionar a lógica para o que fazer com a tecla pressionada
+      }
+      // Verifica se a tecla pressionada é '2'
+      if (tecla == '2')
+      {
+          tecla_dois();
+      }
 
-            // Verifica se a tecla pressionada é '2'
-            if (tecla == '2')
-            {
-                tecla_dois();
-            }
-
-            // Verifica se a tecla pressionada é 'B'
-            if (tecla == 'B')
-            {
-                funcao_B();
-            }
+      // Verifica se a tecla pressionada é 'B'
+      if (tecla == 'B')
+      {
+          funcao_B();
+      }
         
-    }
-        sleep_ms(100); // Pequena pausa para evitar sobrecarga do loop
-}
-    
-    return 0;
+        
+  }
+  
+  sleep_ms(100); // Pequena pausa para evitar sobrecarga do loop
+  return 0;
 }
 
 // Dados e funções gerais:
@@ -556,50 +556,6 @@ void funcao_B()
   }
       npWrite();      // Atualiza os LEDs
       sleep_ms(1000); // Espera 1 segundo
-      npClear();      // Limpa os LEDs
-    }
+      npClear();      // Limpa os LEDs 
 
-}
-
-void tecla_quatro() {
-    // Definir as cores
-    uint8_t pacmanColor[3] = {255, 255, 0};  
-    uint8_t fundoColor[3] = {0, 0, 0};       
-
-    // Limpar a matriz antes de começar a animação
-    npClear();
-
-    // Quadro 1: Pac-Man na posição (2, 2)
-    npSetLED(getIndex(2, 2), pacmanColor[0], pacmanColor[1], pacmanColor[2]);
-    npWrite();
-    sleep_ms(200); // FPS (quadros por segundo)
-
-    // Quadro 2: Pac-Man na posição (2, 3)
-    npClear();
-    npSetLED(getIndex(2, 3), pacmanColor[0], pacmanColor[1], pacmanColor[2]);
-    npWrite();
-    sleep_ms(200);
-
-    // Quadro 3: Pac-Man na posição (2, 4)
-    npClear();
-    npSetLED(getIndex(2, 4), pacmanColor[0], pacmanColor[1], pacmanColor[2]);
-    npWrite();
-    sleep_ms(200);
-
-    // Quadro 4: Pac-Man na posição (3, 4)
-    npClear();
-    npSetLED(getIndex(3, 4), pacmanColor[0], pacmanColor[1], pacmanColor[2]);
-    npWrite();
-    sleep_ms(200);
-
-    // Quadro 5: Pac-Man na posição (4, 4)
-    npClear();
-    npSetLED(getIndex(4, 4), pacmanColor[0], pacmanColor[1], pacmanColor[2]);
-    npWrite();
-    sleep_ms(200);
-
-    // Voltar à posição inicial (opcional)
-    npClear();
-    npWrite();
-    sleep_ms(500); 
 }
