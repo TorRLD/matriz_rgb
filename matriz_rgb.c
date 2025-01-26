@@ -576,7 +576,6 @@ void funcao_B()
     npClear();      // Limpa os LEDs
 }
 
-
 void ajustarBrilho(int matriz[5][5][3], float fator)
     {
         for (int linha = 0; linha < 5; linha++)
