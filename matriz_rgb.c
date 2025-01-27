@@ -8,12 +8,12 @@
 // ------------------- Definições dos Pinos GPIO -------------------
 
 // Definição dos pinos GPIO do teclado matricial
-#define ROW_1    5
-#define ROW_2    18
-#define ROW_3    19
-#define ROW_4    20
-#define COL_1    21
-#define COL_2    6
+#define ROW_1    16
+#define ROW_2    17
+#define ROW_3    18
+#define ROW_4    19
+#define COL_1    20
+#define COL_2    21
 #define COL_3    22
 #define COL_4    26
 
