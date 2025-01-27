@@ -580,6 +580,38 @@ void tecla_dois()
     }
 }
 
+void funcao_B()
+{
+    stdio_init_all();
+    npInit(LED_PIN);
+    npClear();
+
+    // Matriz de cores RGB configurada como Azul (0, 0, 255)
+    int matriz_Azul[5][5][3] = {
+        {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}},
+        {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}},
+        {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}},
+        {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}},
+        {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}}};
+
+    while (true)
+    {
+        for (int linha = 0; linha < 5; linha++)
+        {
+            for (int coluna = 0; coluna < 5; coluna++)
+            {
+                int posicao = getIndex(coluna, linha);
+                npSetLED(posicao, matriz_Azul[linha][coluna][0], matriz_Azul[linha][coluna][1], matriz_Azul[linha][coluna][2]);
+            }
+        }
+
+        npWrite();
+        sleep_ms(1000);
+        npClear();
+        sleep_ms(500);
+    }
+}
+
 void ajustarBrilho(int matriz[5][5][3], float fator)
     {
         for (int linha = 0; linha < 5; linha++)
