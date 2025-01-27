@@ -3,7 +3,7 @@
 #include "hardware/gpio.h"
 
 // Biblioteca gerada pelo arquivo .pio durante compilacao.
-// #include "ws2818b.pio.h" descomentar para utilizá-la
+#include "ws2818b.pio.h" 
 
 // ------------------- Definições dos Pinos GPIO -------------------
 
