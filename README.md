@@ -5,7 +5,17 @@
 Este projeto consiste na implementação de um teclado matricial 4x4 integrado a uma matriz de LEDs controlados por um microcontrolador Raspberry Pi Pico. Cada tecla pressionada no teclado aciona diferentes funções ou animações exibidas nos LEDs.
 
 ---
+## Organização do Repositório
 
+### Líder do Projeto:
+- **Heitor** foi responsável por organizar o repositório, gerenciar as tarefas e garantir a integração do código.
+
+### Estrutura de Arquivos:
+- **`matriz_rgb.c.c`**: Código principal com a lógica de controle do teclado e LEDs.
+- **`ws2818b.pio.h`**: Biblioteca para controle dos LEDs WS2818.
+- **`wokwi.toml`**: Configuração do wokwi no VSCode.
+- **`diagram.json`**: Circuito do projeto no wokwi.
+  
 ## Funcionalidades
 
 Cada tecla do teclado é associada a uma funcionalidade específica. Abaixo está a tabela detalhada com as contribuições e funções implementadas por cada membro do grupo:
@@ -27,33 +37,6 @@ Cada tecla do teclado é associada a uma funcionalidade específica. Abaixo est�
 
 ---
 
-
-## Organização e Contribuições
-
-O projeto foi desenvolvido por um grupo liderado por **Heitor**, responsável por organizar o repositório, definir as tarefas e garantir a integração de todos os componentes.
-
-### Funções e teclas desenvolvidas
-
-- **Heitor (Líder do Grupo):**
-  - Funções: `A`, `C`
-  - Teclas: `1`, `0`
-
-- **Patrick:**
-  - Funções: `B`
-  - Teclas: `2`
-
-- **João:**
-  - Funções: `#` (Sharp)
-  - Teclas: `5`
-
-- **Alex:**
-  - Teclas: `3`
-
-- **Josimar:**
-  - Funções: `D`
-  - Teclas: `4`
-
----
 
 ## Link para o vídeo do funcionamento
 
@@ -96,19 +79,6 @@ Este projeto é de código aberto, sendo permitido o uso, modificação e redist
 **Contato dos Desenvolvedores:**
 
 Para dúvidas ou contribuições, entre em contato com os membros do grupo por meio deste repositório.
-
-
-
-## Organização do Repositório
-
-### Líder do Projeto:
-- **Heitor** foi responsável por organizar o repositório, gerenciar as tarefas e garantir a integração do código.
-
-### Estrutura de Arquivos:
-- **`matriz_rgb.c.c`**: Código principal com a lógica de controle do teclado e LEDs.
-- **`ws2818b.pio.h`**: Biblioteca para controle dos LEDs WS2818.
-- **`wokwi.toml`**: Configuração do wokwi no VSCode.
-- **`diagram.json`**: Circuito do projeto no wokwi.
 
 
 
