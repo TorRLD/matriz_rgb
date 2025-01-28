@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "Heitor Lemos",
+  "author": "Heitor",
   "editor": "wokwi",
   "parts": [
     { "type": "wokwi-breadboard-half", "id": "bb1", "top": 525, "left": -141.2, "attrs": {} },
