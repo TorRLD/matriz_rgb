@@ -145,6 +145,7 @@ int main() {
       {
           tecla_dois();
       }
+      //verifica se a tecla 4 é pressionada
       if (tecla == '4')
       {
           tecla_quatro();
@@ -155,9 +156,10 @@ int main() {
       {
           funcao_B();
       }
-
+      //verifica se a tecla D é pressionada
       if (tecla == 'D') {
         funcao_D();
+
       }
 
         
