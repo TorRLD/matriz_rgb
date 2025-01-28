@@ -634,37 +634,35 @@ void tecla_tres(){
 }
 
 void funcao_C(){
-   
-    stdio_init_all();
+   stdio_init_all();
     npInit(LED_PIN);
     npClear();
 
-    int matriz_Vermelha[5][5][3]={
-        {{255,0,0},{255,0,0},{255,0,0},{255,0,0},{255,0,0}},
-        {{255,0,0},{255,0,0},{255,0,0},{255,0,0},{255,0,0}},
-        {{255,0,0},{255,0,0},{255,0,0},{255,0,0},{255,0,0}},
-        {{255,0,0},{255,0,0},{255,0,0},{255,0,0},{255,0,0}},
-        {{255,0,0},{255,0,0},{255,0,0},{255,0,0},{255,0,0}}};
+    // Matriz de cores RGB configurada como vermelho.(255, 0, 0).
+    int matriz[5][5][3] = {
+        {{255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255,0, 0}, {255, 0, 0}},
+        {{255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}},
+        {{255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}},
+        {{255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}},
+        {{255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}}};
 
-        ajustarBrilho(matriz_Vermelha,0.8); // Reduz o brilho pra 80%
+    ajustarBrilho(matriz, 0.8); // Reduz o brilho para 80%.
 
-        while(true){
-
-            for(int linha=0; linha<5; linha++){
-
-                for(int coluna=0; coluna>5; coluna++){
-
-                    int posicao = getIndex(linha, coluna);
-
-                    npSetLED(posicao,matriz_Vermelha[linha][coluna][0],matriz_Vermelha[linha][coluna][1],matriz_Vermelha[linha][coluna][2]);
-                }
+    while (true)
+    {
+        for (int linha = 0; linha < 5; linha++)
+        {
+            for (int coluna = 0; coluna < 5; coluna++)
+            {
+                int posicao = getIndex(coluna, linha);
+                npSetLED(posicao, matriz[linha][coluna][0], matriz[linha][coluna][1], matriz[linha][coluna][2]);
             }
         }
-        
         npWrite();
         sleep_ms(1000);
         npClear();
         sleep_ms(500);
+    }
         
     }
 
