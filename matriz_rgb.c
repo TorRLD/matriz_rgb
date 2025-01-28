@@ -856,3 +856,59 @@ void funcao_sharp()
         sleep_ms(500);
     }
 }
+
+void tecla_quatro() {
+    // Definir as cores
+    uint8_t pacmanColor[3] = {255, 255, 0};  
+    uint8_t fundoColor[3] = {0, 0, 0};       
+
+    // Limpar a matriz antes de começar a animação
+    npClear();
+
+    // Quadro 1: Pac-Man na posição (2, 2)
+    npSetLED(getIndex(2, 2), pacmanColor[0], pacmanColor[1], pacmanColor[2]);
+    npWrite();
+    sleep_ms(200); // FPS (quadros por segundo)
+
+    // Quadro 2: Pac-Man na posição (2, 3)
+    npClear();
+    npSetLED(getIndex(2, 3), pacmanColor[0], pacmanColor[1], pacmanColor[2]);
+    npWrite();
+    sleep_ms(200);
+
+    // Quadro 3: Pac-Man na posição (2, 4)
+    npClear();
+    npSetLED(getIndex(2, 4), pacmanColor[0], pacmanColor[1], pacmanColor[2]);
+    npWrite();
+    sleep_ms(200);
+
+    // Quadro 4: Pac-Man na posição (3, 4)
+    npClear();
+    npSetLED(getIndex(3, 4), pacmanColor[0], pacmanColor[1], pacmanColor[2]);
+    npWrite();
+    sleep_ms(200);
+
+    // Quadro 5: Pac-Man na posição (4, 4)
+    npClear();
+    npSetLED(getIndex(4, 4), pacmanColor[0], pacmanColor[1], pacmanColor[2]);
+    npWrite();
+    sleep_ms(200);
+
+    // Voltar à posição inicial (opcional)
+    npClear();
+    npWrite();
+    sleep_ms(500); 
+}
+
+void funcao_D() {
+    // Cor verde com 50% de intensidade
+    uint8_t verde[3] = {0, 127, 0};  // RGB: 0 (vermelho), 127 (verde, 50% intensidade), 0 (azul)
+
+    // Configura todos os LEDs para a cor verde
+    for (int i = 0; i < 25; i++) {
+        npSetLED(i, verde[0], verde[1], verde[2]);  // Define a cor verde nos LEDs da matriz
+    }
+
+    // Atualiza a matriz de LEDs
+    npWrite();
+}
