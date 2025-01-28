@@ -54,6 +54,11 @@ O projeto foi desenvolvido por um grupo liderado por **Heitor**, responsável po
 
 ---
 
+## Link para o vídeo do funcionamento
+
+
+---
+
 ## Estrutura do Código
 
 - **Definições dos GPIOs:** Configuração dos pinos para o teclado matricial.
