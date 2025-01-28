@@ -135,42 +135,42 @@ int main() {
   printf("Sistema iniciado. Pressione uma tecla no teclado matricial.\n");
   
   while (true) {
-      char tecla = read_keypad();
-      if (tecla != '\0'){ 
-          printf("Tecla '%c' pressionada.\n", tecla);
-          // Aqui você pode adicionar a lógica para o que fazer com a tecla pressionada
-      }
-      // Verifica se a tecla pressionada é '2'
-      if (tecla == '2')
-      {
-          tecla_dois();
-      }
-      //verifica se a tecla 4 é pressionada
-      if (tecla == '4')
-      {
-          tecla_quatro();
-      }
+    char tecla = read_keypad();
+    if (tecla != '\0'){ 
+        printf("Tecla '%c' pressionada.\n", tecla);
+        // Aqui você pode adicionar a lógica para o que fazer com a tecla pressionada
+    }
+    // Verifica se a tecla pressionada é '2'
+    if (tecla == '2')
+    {
+        tecla_dois();
+    }
+    //verifica se a tecla 4 é pressionada
+    if (tecla == '4')
+    {
+        tecla_quatro();
+    }
 
-            // Verifica se a tecla pressionada é 'B'
-            if (tecla == 'B')
-            {
-                funcao_B();
-            }
-            // Verifica se a tecla pressionada é '0'
-            if (tecla == '0')
-            {
-                tecla_zero();
-            }
-            // Verifica se a tecla pressionada é '5'
-            if (tecla == '5')
-            {
-                tecla_cinco();
-            }
-            // Verifica se a tecla pressionada é '0'
-            if (tecla == '#')
-            {
-                funcao_sharp();
-            }
+    // Verifica se a tecla pressionada é 'B'
+    if (tecla == 'B')
+    {
+        funcao_B();
+    }
+    // Verifica se a tecla pressionada é '0'
+    if (tecla == '0')
+    {
+        tecla_zero();
+    }
+    // Verifica se a tecla pressionada é '5'
+    if (tecla == '5')
+    {
+        tecla_cinco();
+    }
+    // Verifica se a tecla pressionada é '0'
+    if (tecla == '#')
+    {
+        funcao_sharp();
+    }
         
         
   }
