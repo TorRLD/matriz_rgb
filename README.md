@@ -23,6 +23,7 @@ Cada tecla do teclado é associada a uma funcionalidade específica. Abaixo est�
 | **Função C**      | Animação específica               | Heitor            |
 | **Função D**      | Animação específica               | Josimar           |
 | **Função #**      | Animação específica               | João              |
+| **Vídeo**         | Vídeo funcionamento Wokwi         | André             |
 
 ---
 
