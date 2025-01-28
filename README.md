@@ -105,9 +105,10 @@ Para dúvidas ou contribuições, entre em contato com os membros do grupo por m
 - **Heitor** foi responsável por organizar o repositório, gerenciar as tarefas e garantir a integração do código.
 
 ### Estrutura de Arquivos:
-- **`main.c`**: Código principal com a lógica de controle do teclado e LEDs.
+- **`matriz_rgb.c.c`**: Código principal com a lógica de controle do teclado e LEDs.
 - **`ws2818b.pio.h`**: Biblioteca para controle dos LEDs WS2818.
-- **Outros Arquivos**: Funções auxiliares implementadas em arquivos adicionais.
+- **`wokwi.toml`**: Configuração do wokwi no VSCode.
+- **`diagram.json`**: Circuito do projeto no wokwi.
 
 
 
@@ -120,5 +121,6 @@ Agradecemos a todos os membros do grupo por suas contribuições:
 - **João**
 - **Alex**
 - **Josimar**
+- **André**
 
 Além disso, agradecemos à comunidade por fornecer suporte e documentação sobre o Raspberry Pi Pico e os LEDs WS2818.
