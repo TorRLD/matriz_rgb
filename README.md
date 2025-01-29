@@ -106,7 +106,7 @@ Cada tecla do teclado é associada a uma funcionalidade específica. Abaixo est�
 
 ## Link para o Vídeo do Funcionamento
 
-[Assista ao vídeo](URL_DO_VIDEO) <!-- Substitua com o link real do vídeo -->
+[Assista ao vídeo](https://www.youtube.com/watch?v=ArrbpIgp6co)
 
 ---
 
