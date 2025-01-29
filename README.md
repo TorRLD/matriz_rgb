@@ -78,7 +78,7 @@ Contribuições são bem-vindas! Para contribuir com este projeto, por favor sig
 - **Heitor** foi responsável por organizar o repositório, gerenciar as tarefas e garantir a integração do código.
 
 ### Estrutura de Arquivos:
-- **`matriz_rgb.c.c`**: Código principal com a lógica de controle do teclado e LEDs.
+- **`matriz_rgb.c`**: Código principal com a lógica de controle do teclado e LEDs.
 - **`ws2818b.pio.h`**: Biblioteca para controle dos LEDs WS2818.
 - **`wokwi.toml`**: Configuração do wokwi no VSCode.
 - **`diagram.json`**: Circuito do projeto no wokwi.
