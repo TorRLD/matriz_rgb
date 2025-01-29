@@ -89,12 +89,12 @@ Cada tecla do teclado é associada a uma funcionalidade específica. Abaixo est�
 
 | **Tecla/Função** | **Descrição**                      | **Desenvolvedor** |
 |-------------------|------------------------------------|-------------------|
-| **Tecla 1**       | Animação personalizada            | Heitor            |
-| **Tecla 0**       | Animação personalizada            | Heitor            |
-| **Tecla 2**       | Animação personalizada            | Patrick           |
+| **Tecla 1**       | Animação bomberman                | Heitor            |
+| **Tecla 0**       | Animação personangens Mario Bross | Heitor            |
+| **Tecla 2**       | Animação ping ping                | Patrick           |
 | **Tecla 3**       | Animação estilo Pokeball          | Alex              |
-| **Tecla 4**       | Animação personalizada            | Josimar           |
-| **Tecla 5**       | Animação personalizada            | João              |
+| **Tecla 4**       | Animação PacMan                   | Josimar           |
+| **Tecla 5**       | Animação Jogo da Cobrinha         | João              |
 | **Função A**      | Animação específica               | Heitor            |
 | **Função B**      | Animação específica               | Patrick           |
 | **Função C**      | Animação específica               | Heitor            |
